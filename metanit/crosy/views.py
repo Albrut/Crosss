@@ -18,7 +18,7 @@ def contact(request):
     return render(request, 'contact.html', {'contact': contact})
 def product(request):
     products = models.Products.objects.all()
-    return render(request, 'products.html', {'contact': products})
+    return render(request, 'products.html', {'product': products})
 
 
 
