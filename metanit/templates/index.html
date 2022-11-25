@@ -75,7 +75,7 @@
 
             <!-- Logo -->
             <div class="logo">
-              <a class="logo-wrap" href="index.html">
+              <a class="logo-wrap" href="/home/">
                 <img
                   class="logo-img logo-img-main"
                   src=""
@@ -98,22 +98,22 @@
                 <li class="nav-item">
                   <a
                     class="nav-item-child nav-item-hover active"
-                    href="index.html"
+                    href="/home/"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-item-child nav-item-hover" href="about.html"
+                  <a class="nav-item-child nav-item-hover" href="/about/"
                     >About</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-item-child nav-item-hover" href="products.html"
+                  <a class="nav-item-child nav-item-hover" href="/products/"
                     >Products</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-item-child nav-item-hover" href="contact.html"
+                  <a class="nav-item-child nav-item-hover" href="/contact/"
                     >Contact</a
                   >
                 </li>
@@ -143,9 +143,8 @@
           ></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         </ol>
-      </div>
 
-      <!-- Wrapper for slides -->
+      </div>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img
@@ -153,16 +152,18 @@
             src="{% static 'img/1920x1080/slide1.jpg' %}"
             alt="Slider Image"
           />
+
           <div class="container">
             <div class="carousel-centered">
               <div class="margin-b-40">
                 <h1 class="carousel-title">Hi-Tech Design</h1>
                 <p>
-                  Lorem ipsum dolor amet consectetur adipiscing dolore magna
-                  aliqua <br />
-                  enim minim estudiat veniam siad venumus dolore
+                     <br />
+
                 </p>
               </div>
+
+
               <a
                 href="#"
                 class="btn-theme btn-theme-sm btn-white-brd text-uppercase"
@@ -182,9 +183,8 @@
               <div class="margin-b-40">
                 <h2 class="carousel-title">Hi-Tech Design</h2>
                 <p>
-                  Lorem ipsum dolor amet consectetur adipiscing dolore magna
-                  aliqua <br />
-                  enim minim estudiat veniam siad venumus dolore
+                  <br />
+
                 </p>
               </div>
               <a
@@ -205,10 +205,11 @@
         <div class="col-sm-6">
           <h2>Лучшие крассовки</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor
-            incididunt ut laboret dolore magna aliqua enim minim veniam
-            exercitation
+
           </p>
+
+
+           {% for i in cross_1 %}
         </div>
       </div>
       <!--// end row -->
@@ -219,18 +220,17 @@
             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
               <img
                 class="img-responsive"
-                src="{% static 'img/clients/01.jpg' %}"
+                src="{{ i.imga1.url }}"
                 alt="Latest Products Image"
               />
             </div>
           </div>
           <h4>
-            <a href="#">Air Jordan 4</a>
-            <span class="text-uppercase margin-l-20">3500c</span>
+            <a href="#">{{ i.txta }}</a>
+            <span class="text-uppercase margin-l-20">{{ i.prc1 }}</span>
           </h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor
-            incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+            {{ i.txta2 }}
           </p>
           <a class="link" href="#">Read More</a>
         </div>
@@ -242,41 +242,40 @@
             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
               <img
                 class="img-responsive"
-                src="{% static 'img/clients/02.jpg' %}"
+                src="{{ i.imga2.url }}"
                 alt="Latest Products Image"
               />
             </div>
           </div>
           <h4>
-            <a href="#">Dunk Low</a>
-            <span class="text-uppercase margin-l-20">3000c</span>
+            <a href="#">{{ i.txta3 }}</a>
+            <span class="text-uppercase margin-l-20">{{ i.prc2 }}</span>
           </h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor
-            incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor
+            {{ i.txta4 }}
           </p>
           <a class="link" href="#">Read More</a>
         </div>
         <!-- End Latest Products -->
 
         <!-- Latest Products -->
-          {% for i in cross_1 %}
+
         <div class="col-sm-4 sm-margin-b-50">
           <div class="margin-b-20">
             <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
               <img
                 class="img-responsive"
-                src="{{ i.imga.url }}"
+                src="{{ i.imga3.url }}"
                 alt="Latest Products Image"
               />
             </div>
           </div>
           <h4>
-            <a href="#">Air Max Plus Tide</a>
-            <span class="text-uppercase margin-l-20">2800c</span>
+            <a href="#">{{ i.txta5 }}</a>
+            <span class="text-uppercase margin-l-20">{{ i.prc3 }}</span>
           </h4>
           <p>
-           {{ i.txta }}
+           {{ i.txta6 }}
           </p>
           <a class="link" href="#">Read More</a>
         </div>

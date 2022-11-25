@@ -2,24 +2,18 @@ from django.db import models
 
 
 class Mainpage1_cross(models.Model):
-    imga = models.ImageField(upload_to='',default='default.jpg')
+    imga1 = models.ImageField(upload_to='',default='default.jpg')
     imga2= models.ImageField(upload_to='',default='default.jpg')
     imga3 = models.ImageField(upload_to='',default='default.jpg')
-    imga4= models.ImageField(upload_to='',default='default.jpg')
-    imga5= models.ImageField(upload_to='',default='default.jpg')
-    imga6 = models.ImageField(upload_to='',default='default.jpg')
-    imga7= models.ImageField(upload_to='',default='default.jpg')
-    imga8 = models.ImageField(upload_to='',default='default.jpg')
-    imga9= models.ImageField(upload_to='',default='default.jpg')
     txta = models.CharField(max_length=50,null=True)
     txta2 = models.CharField(max_length=50,null=True)
     txta3 = models.CharField(max_length=50,null=True)
     txta4 = models.CharField(max_length=50,null=True)
     txta5= models.CharField(max_length=50,null=True)
     txta6 = models.CharField(max_length=50,null=True)
-    txta7 = models.CharField(max_length=50,null=True)
-    txta8 = models.CharField(max_length=50,null=True)
-    txta9 = models.CharField(max_length=50,null=True)
+    prc1 = models.CharField(max_length=10,null=True)
+    prc2 = models.CharField(max_length=10, null=True)
+    prc3 = models.CharField(max_length=10, null=True)
 
 class About_us(models.Model):
     image1 = models.ImageField(upload_to='')
@@ -55,13 +49,12 @@ class Contact(models.Model):
 
 
 class Products(models.Model):
-    image1 = models.ImageField(upload_to='')
-    image2 = models.ImageField(upload_to='')
-    image3 = models.ImageField(upload_to='')
-    text1_1 = models.TextField()
-    text1_2 = models.TextField()
-    text2_1 = models.TextField()
-    text2_2 = models.TextField()
-    image_down1 = models.ImageField(upload_to='')
-    image_down2 = models.ImageField(upload_to='')
-    image_down3 = models.ImageField(upload_to='')
+    imge1 = models.ImageField(upload_to='', default='default.jpg')
+    imge2 = models.ImageField(upload_to='', default='default.jpg')
+    imge3 = models.ImageField(upload_to='', default='default.jpg')
+    txte1 = models.CharField(max_length=50, null=True)
+    txte2 = models.CharField(max_length=50, null=True)
+    txte3 = models.CharField(max_length=50, null=True)
+    txte4 = models.CharField(max_length=50, null=True)
+    txte5 = models.CharField(max_length=50, null=True)
+    txte6 = models.CharField(max_length=50, null=True)
